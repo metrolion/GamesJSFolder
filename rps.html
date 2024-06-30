@@ -51,7 +51,7 @@
 
         <div class="col-6">
           <h5><div id="Message" class="bg-danger rounded text-center"></div></h5>
-          <img id="imgResult" src="" class="img-fluid" alt="Pick">
+          <img id="imgResult" src="" class="img-fluid" alt="">
          
       </div>
     </div>
@@ -87,7 +87,8 @@ const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:
                   
                   setTimeout(() => {
                    
-                   let img = `c:\\gameimages\\No2.jpg`;
+                  // let img = `c:\\gameimages\\No2.jpg`;
+                  let img = `/images/No2.jpg`;
                   
                   newImg.src= img;
                
@@ -113,18 +114,13 @@ const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:
                 newMsg.innerHTML = "<h4>" +findmsg.msg + "</h4>";
                 findmsg.count += 1;
 
-              //  for (var i = 0; i < 3; i++)
-                //{
-                   // alert(items[i].count + "-" + items[i].name);
-                //}
+             
                
                 rockScore.innerHTML = `<div class='col-6'>Rock Total:</div><div class='col-6'> ${items[0].count}</div>`;
                 paperScore.innerHTML = `<div class='col-6'>Paper Total:</div><div class='col-6'> ${items[1].count}</div>`;
                 scissorsScore.innerHTML = `<div class='col-6'>Scissors Total:</div><div class='col-6'> ${items[2].count}</div>`
 
-              //newImg.src="c:\\gameimages\\No1.jpg";
-                
-              // console.log(JSON.parse(jsonString));
+             
             }, 3000);
            
             }
