@@ -18,25 +18,43 @@
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
         
-        <h1 class="title">Rock, Paper , Scissors</h1>
-        <button class="btn btn-primary" onclick="showResult()">Shoot</button>
-        <div class="text-center">
-            <img id="imgResult" src="" class="img-fluid" alt="Pick">
-            <div id="Message" class="bg-danger"></div>
-        </div>
-        <div class="row text-center bg-dark text-white">
-            <div class="col-4" id="RockScore">
+        
+  <h1 class="title">Rock, Paper , Scissors</h1>
+        <div class="row">
+            <div class="col-6">
+              <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+                  <div class="card-header"><button class="btn btn-primary mb-3" onclick="showResult()">Shoot</button></div>
+                  <div class="card-body">
+                    <div class="card-title"> 
+                    <p class="card-text"></p>
+                   
+                    <div class="row text-center bg-primary text-center text-white rounded">
+                      Totals:
+                      <div class="row" id="RockScore">
+          
+                      </div>
+                      <div class="row" id="PaperScore">
+          
+                      </div>
+          
+                      <div class="row" id="ScissorsScore">
+          
+                      </div>
+                      
+                  </div>
+                 
+                  
+                </div>
+              </div>
+              </div>  
+       </div>
 
-            </div>
-            <div class="col-4" id="PaperScore">
-
-            </div>
-
-            <div class="col-4" id="ScissorsScore">
-
-            </div>
-            
-        </div>
+        <div class="col-6">
+          <h5><div id="Message" class="bg-danger rounded text-center"></div></h5>
+          <img id="imgResult" src="" class="img-fluid" alt="Pick">
+         
+      </div>
+    </div>
         <script>
 
 const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:"Scissors you loss"}];
@@ -100,9 +118,9 @@ const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:
                    // alert(items[i].count + "-" + items[i].name);
                 //}
                
-                rockScore.innerHTML = `Rock Total: ${items[0].count}`;
-                paperScore.innerHTML = `Paper Total: ${items[1].count}`;
-                scissorsScore.innerHTML = `Scissors Total: ${items[2].count}`
+                rockScore.innerHTML = `<div class='col-6'>Rock Total:</div><div class='col-6'> ${items[0].count}</div>`;
+                paperScore.innerHTML = `<div class='col-6'>Paper Total:</div><div class='col-6'> ${items[1].count}</div>`;
+                scissorsScore.innerHTML = `<div class='col-6'>Scissors Total:</div><div class='col-6'> ${items[2].count}</div>`
 
               //newImg.src="c:\\gameimages\\No1.jpg";
                 
