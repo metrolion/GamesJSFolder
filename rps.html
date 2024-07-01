@@ -43,23 +43,24 @@
                       
                   </div>
                  
-                  
+                  <div id="Message" class="bg-danger rounded text-center p5 text-white mt-5"></div>
                 </div>
               </div>
               </div>  
        </div>
 
         <div class="col-6">
-          <h5><div id="Message" class="bg-danger rounded text-center"></div></h5>
-          <img id="imgResult" src="" class="img-fluid" alt="">
-         
+          
+          <img id="imgResult" src="" class="" alt="">
+          
+          
       </div>
     </div>
         <script>
 
-const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:"Scissors you loss"}];
-                items.push({id:1,name:"Paper",imgPath:"c:\\gameimages\\paper.jpg",count:0,msg:"Rock you loss"});
-                items.push({id:2,name:"Scissors",imgPath:"c:\\gameimages\\scissors.jpg",count:0, msg:"Paper you loss"});
+const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:"Scissors you are out"}];
+                items.push({id:1,name:"Paper",imgPath:"c:\\gameimages\\paper.jpg",count:0,msg:"Rock you are out"});
+                items.push({id:2,name:"Scissors",imgPath:"c:\\gameimages\\scissors.jpg",count:0, msg:"Paper you are out"});
                 
             function showResult()
             {
@@ -73,7 +74,8 @@ const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:
                 
                 newMsg.innerHTML = "";
                 
-                let img = `c:\\gameimages\\No1.jpg`;
+              //  let img = `c:\\gameimages\\No1.jpg`;
+             let img = `./images/No1.jpg`;
                    
                 newImg.src= img;
 
@@ -88,14 +90,15 @@ const items = [{id:0,name:"Rock",imgPath:"c:\\gameimages\\rock.jpg",count:0,msg:
                   setTimeout(() => {
                    
                   // let img = `c:\\gameimages\\No2.jpg`;
-                  let img = `/images/No2.jpg`;
+                  let img = `./images/No2.jpg`;
                   
                   newImg.src= img;
                
                  }, 1000);
                  setTimeout(() => {
                    
-                   let img = `c:\\gameimages\\No3.jpg`;
+                 //  let img = `c:\\gameimages\\No3.jpg`;
+                 let img = `./images/No3.jpg`;
                   
                   newImg.src= img;
                
